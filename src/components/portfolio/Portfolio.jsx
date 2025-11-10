@@ -5,25 +5,25 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "React Commerc",
+    title: "Alina Website",
     img: "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fuga. Tenetur sequi quaerat assumenda corrupti ex totam nulla voluptas aspernatur, dignissimos quibusdam tempore incidunt. Eum et quod tempore voluptate ad.",
   },
   {
     id: 2,
-    title: "Next Commerc",
+    title: "Warehose Management Project",
     img: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fuga. Tenetur sequi quaerat assumenda corrupti ex totam nulla voluptas aspernatur, dignissimos quibusdam tempore incidunt. Eum et quod tempore voluptate ad.",
   },
   {
     id: 3,
-    title: "Java Commerc",
+    title: "Enbio - FronEnd Design",
     img: "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fuga. Tenetur sequi quaerat assumenda corrupti ex totam nulla voluptas aspernatur, dignissimos quibusdam tempore incidunt. Eum et quod tempore voluptate ad.",
   },
   {
     id: 4,
-    title: " Data Commerc",
+    title: "ETL data warehousing project",
     img: "https://images.pexels.com/photos/1111367/pexels-photo-1111367.jpeg",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fuga. Tenetur sequi quaerat assumenda corrupti ex totam nulla voluptas aspernatur, dignissimos quibusdam tempore incidunt. Eum et quod tempore voluptate ad.",
   },
