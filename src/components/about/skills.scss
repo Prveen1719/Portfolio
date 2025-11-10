@@ -1,0 +1,189 @@
+.skills {
+  padding: 4px 24px;
+  position: relative;
+  height: 100vh; // exact page height
+
+  .container {
+    margin: auto;
+    max-width: 1320px; // align width with about section feel
+    padding-top: 16px; // add top space so header sits below border
+
+    h2 {
+      font-size: xx-large;
+      font-weight: 500;
+      margin-bottom: 12px;
+      font-size: 40px;
+      text-align: center;
+    }
+
+    b {
+      color: rebeccapurple;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 8px 0 6px;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      padding: 10px 0;
+      backdrop-filter: blur(6px);
+      background: linear-gradient(
+        to bottom,
+        rgba(12, 12, 29, 0.85),
+        rgba(12, 12, 29, 0.6)
+      );
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+      .filter_btn {
+        background: transparent;
+        border: 1px solid rgba(102, 51, 153, 0.5); // rebeccapurple with alpha
+        color: #d8cfff;
+        padding: 10px 18px; // larger button size
+        border-radius: 999px;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.15s ease, border 0.2s ease;
+        font-size: 16px; // bigger text
+        font-weight: 700; // bold text
+
+        &:hover {
+          background: rgba(102, 51, 153, 0.15);
+          transform: translateY(-2px);
+          border-color: rebeccapurple;
+        }
+
+        &.active {
+          background: rgba(102, 51, 153, 0.25);
+          border-color: rebeccapurple;
+        }
+      }
+    }
+
+    .skill_cont {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem; // slightly larger spacing
+      padding: 1.25rem 0; // slightly larger padding
+      height: calc(100vh - 200px); // fit under title and sticky filters
+      grid-auto-rows: 110px; // consistent row height so cards don't change size
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      // hide scrollbar but allow scrolling
+      -ms-overflow-style: none; // IE and Edge
+      scrollbar-width: none; // Firefox
+      &::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+
+      .skill_card {
+        background: rgba(255, 255, 255, 0.04); // subtle transparent card
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 14px 16px; // a bit bigger
+        border-radius: 14px;
+        backdrop-filter: blur(4px);
+        transition: box-shadow 0.2s ease, transform 0.15s ease,
+          border-color 0.2s ease;
+        height: 100%; // fill fixed grid row height
+
+        &:hover {
+          box-shadow: 0 8px 26px rgba(102, 51, 153, 0.25);
+          border-color: rgba(102, 51, 153, 0.6);
+        }
+
+        .skill_header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 10px;
+          gap: 8px;
+        }
+
+        .skill_name {
+          font-weight: 600;
+          font-size: 15px;
+          color: #eae6ff;
+        }
+
+        .skill_level {
+          font-size: 13px;
+          color: #bca8ff;
+        }
+
+        .progress_track {
+          position: relative;
+          height: 8px;
+          width: 100%;
+          border-radius: 999px;
+          background: rgba(102, 51, 153, 0.25);
+          overflow: hidden;
+        }
+
+        .progress_fill {
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          background: rebeccapurple; // purple used previously
+          border-radius: 999px;
+          box-shadow: 0 0 12px rgba(102, 51, 153, 0.6);
+        }
+
+        .skill_meta {
+          margin-top: 10px;
+          font-size: 12px;
+          color: #d9d2ff;
+          opacity: 0.9;
+          display: inline-block;
+          padding: 2px 8px;
+          border: 1px solid rgba(102, 51, 153, 0.4);
+          border-radius: 999px;
+          background: rgba(102, 51, 153, 0.12);
+        }
+      }
+    }
+  }
+}
+
+// responsive adjustments to keep cards compact and align with about width
+@media (max-width: 1200px) {
+  .skills {
+    .container {
+      max-width: 960px;
+      .skill_cont {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .skills {
+    .container {
+      max-width: 760px;
+      .skill_cont {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .skills {
+    .container {
+      max-width: 94%;
+      .filters {
+        gap: 8px;
+      }
+      .skill_cont {
+        grid-template-columns: 1fr;
+        height: calc(100vh - 220px);
+      }
+    }
+  }
+}
