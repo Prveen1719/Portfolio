@@ -50,7 +50,7 @@ const About = () => {
               Web Developer
             </motion.b>{" "}
             and <br />
-            <motion.b whileHover={{ color: "gray" }}>Data Analyst</motion.b>
+            <motion.b whileHover={{ color: "orange" }}>Data Analyst</motion.b>
           </h2>
         </div>
         <div className='base_container'>
