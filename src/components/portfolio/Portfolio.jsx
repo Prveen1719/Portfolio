@@ -27,6 +27,12 @@ const items = [
     img: "https://images.pexels.com/photos/1111367/pexels-photo-1111367.jpeg",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fuga. Tenetur sequi quaerat assumenda corrupti ex totam nulla voluptas aspernatur, dignissimos quibusdam tempore incidunt. Eum et quod tempore voluptate ad.",
   },
+  {
+    id: 5,
+    title: "Thesis - Vehicl blindSpot awareness project",
+    img: "https://images.pexels.com/photos/1111367/pexels-photo-1111367.jpeg",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fuga. Tenetur sequi quaerat assumenda corrupti ex totam nulla voluptas aspernatur, dignissimos quibusdam tempore incidunt. Eum et quod tempore voluptate ad.",
+  },
 ];
 
 const Single = ({ item }) => {
