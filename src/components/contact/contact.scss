@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .contact {
   height: 100%;
   max-width: 1366px;
@@ -6,11 +8,25 @@
   align-items: center;
   gap: 50px;
 
+  @include mobile {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+  }
+
   .textContainer {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @include mobile {
+      gap: 20px;
+      text-align: center;
+      align-items: center;
+      margin-top: 70px;
+    }
 
     h1 {
       font-family: "Space Grotesk", "Poppins", sans-serif;
@@ -26,6 +42,10 @@
       background-clip: text;
       color: transparent;
       margin-bottom: 20px;
+
+      @include mobile {
+        font-size: 36px;
+      }
     }
 
     .item {
@@ -51,6 +71,11 @@
   }
   .formContainer {
     flex: 1;
+
+    @include mobile {
+      padding: 50px;
+      width: 100%;
+    }
 
     .phoneSvg {
       stroke: #ffb74d;
@@ -81,6 +106,10 @@
         outline: none;
         transition: border-color 0.2s ease, box-shadow 0.2s ease,
           background-color 0.2s ease;
+
+        @include mobile {
+          padding: 10px;
+        }
 
         &::placeholder {
           color: #b9bac6;
@@ -114,7 +143,8 @@
         cursor: pointer;
         font-weight: 800;
         letter-spacing: 0.3px;
-        transition: transform 0.12s ease, background 0.2s ease, border-color 0.2s ease;
+        transition: transform 0.12s ease, background 0.2s ease,
+          border-color 0.2s ease;
 
         &:hover {
           transform: translateY(-1px);

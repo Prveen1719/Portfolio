@@ -32,7 +32,7 @@ const About = () => {
       //animate='animate'
       //whileInView='animate'
       ref={ref}
-      animate={isInView && "animate"}
+      animate={"animate"}
     >
       <motion.div className='header_txt_cont' variants={variants}>
         <p>
