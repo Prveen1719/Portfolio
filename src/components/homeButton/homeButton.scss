@@ -1,0 +1,50 @@
+@import "../../app.scss";
+
+.homeButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rebeccapurple;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 51, 153, 0.4);
+
+  &:hover {
+    background-color: white;
+    color: rebeccapurple;
+    border-color: rebeccapurple;
+    box-shadow: 0 6px 20px rgba(102, 51, 153, 0.6);
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include mobile {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+

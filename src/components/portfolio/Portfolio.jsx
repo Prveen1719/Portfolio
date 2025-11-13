@@ -6,32 +6,37 @@ const items = [
   {
     id: 1,
     title: "Alina Website",
-    img: "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg",
+    img: "/Pr_2.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fuga. Tenetur sequi quaerat assumenda corrupti ex totam nulla voluptas aspernatur, dignissimos quibusdam tempore incidunt. Eum et quod tempore voluptate ad.",
+    tech: ["React", "Figma", "HTML5", "CSS3"],
   },
   {
     id: 2,
     title: "Warehose Management Project",
-    img: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg",
+    img: "/Pr_1.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fuga. Tenetur sequi quaerat assumenda corrupti ex totam nulla voluptas aspernatur, dignissimos quibusdam tempore incidunt. Eum et quod tempore voluptate ad.",
+    tech: ["React", "Figma", "HTML5", "CSS3"],
   },
   {
     id: 3,
     title: "Enbio - FronEnd Design",
-    img: "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg",
+    img: "/Pr_4.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fuga. Tenetur sequi quaerat assumenda corrupti ex totam nulla voluptas aspernatur, dignissimos quibusdam tempore incidunt. Eum et quod tempore voluptate ad.",
+    tech: ["React", "Figma", "HTML5", "CSS3"],
   },
   {
     id: 4,
     title: "ETL data warehousing project",
-    img: "https://images.pexels.com/photos/1111367/pexels-photo-1111367.jpeg",
+    img: "/Pr_3.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fuga. Tenetur sequi quaerat assumenda corrupti ex totam nulla voluptas aspernatur, dignissimos quibusdam tempore incidunt. Eum et quod tempore voluptate ad.",
+    tech: ["React", "Figma", "HTML5", "CSS3"],
   },
   {
     id: 5,
     title: "Thesis - Vehicl blindSpot awareness project",
-    img: "https://images.pexels.com/photos/1111367/pexels-photo-1111367.jpeg",
+    img: "/Pr_5.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fuga. Tenetur sequi quaerat assumenda corrupti ex totam nulla voluptas aspernatur, dignissimos quibusdam tempore incidunt. Eum et quod tempore voluptate ad.",
+    tech: ["React", "Figma", "HTML5", "CSS3"],
   },
 ];
 
@@ -54,6 +59,13 @@ const Single = ({ item }) => {
           </div>
           <motion.div style={{ y }} className='text-container'>
             <h2>{item.title}</h2>
+            <div className='tech-container'>
+              {item.tech.map((tech, index) => (
+                <span key={index} className='tech-box'>
+                  {tech}
+                </span>
+              ))}
+            </div>
             <p>{item.desc}</p>
             <button>See Code</button>
           </motion.div>

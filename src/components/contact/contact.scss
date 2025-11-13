@@ -22,10 +22,10 @@
     gap: 40px;
 
     @include mobile {
-      gap: 20px;
+      gap: 10px;
       text-align: center;
       align-items: center;
-      margin-top: 70px;
+      margin-top: 60px;
     }
 
     h1 {
@@ -48,7 +48,8 @@
       }
     }
 
-    .item {
+    .item,
+    .item_Ad {
       display: flex;
       flex-direction: column;
       gap: 6px;
@@ -68,12 +69,19 @@
         opacity: 0.9;
       }
     }
+
+    .item_Ad {
+      @include mobile {
+        display: none;
+      }
+    }
   }
   .formContainer {
     flex: 1;
+    position: relative;
 
     @include mobile {
-      padding: 50px;
+      padding: 32px 16px 16px;
       width: 100%;
     }
 
@@ -83,6 +91,17 @@
       margin: auto;
       z-index: -1;
       filter: drop-shadow(0 6px 24px rgba(255, 183, 77, 0.15));
+
+      @include mobile {
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 220px;
+        height: 220px;
+        opacity: 0.6;
+        pointer-events: none;
+      }
     }
 
     form {
@@ -95,6 +114,16 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(10px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      max-width: 640px;
+      width: 100%;
+      margin: 0 auto;
+
+      @include mobile {
+        padding: 16px;
+        gap: 14px;
+        border-radius: 14px;
+        margin-top: -140px;
+      }
 
       input,
       textarea {
@@ -106,14 +135,16 @@
         outline: none;
         transition: border-color 0.2s ease, box-shadow 0.2s ease,
           background-color 0.2s ease;
+        font-size: 16px; // avoid iOS zoom
+        line-height: 1.4;
 
         @include mobile {
-          padding: 10px;
+          padding: 14px 16px;
         }
 
         &::placeholder {
           color: #b9bac6;
-          opacity: 0.85;
+          opacity: 0.9;
         }
 
         &:hover {
@@ -125,6 +156,15 @@
           border-color: #ffb74d;
           box-shadow: 0 0 0 3px rgba(255, 183, 77, 0.25);
           background-color: rgba(255, 255, 255, 0.08);
+        }
+      }
+
+      textarea {
+        min-height: 160px;
+        resize: vertical;
+
+        @include mobile {
+          min-height: 140px;
         }
       }
 
@@ -145,6 +185,11 @@
         letter-spacing: 0.3px;
         transition: transform 0.12s ease, background 0.2s ease,
           border-color 0.2s ease;
+        font-size: 16px;
+
+        @include mobile {
+          padding: 14px 18px;
+        }
 
         &:hover {
           transform: translateY(-1px);

@@ -11,14 +11,14 @@
     align-self: flex-end;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
     margin-top: -100px;
 
     @include mobile {
-      align-self: center;
-      text-align: center;
+      text-align: right;
       flex-direction: column;
       margin-top: 0;
+      flex: none;
     }
 
     p {
@@ -26,15 +26,20 @@
       font-size: 20px;
       color: gray;
       text-align: right;
+
+      @include mobile {
+        font-size: 15px;
+      }
     }
 
     hr {
-      width: 500px;
+      width: 400px;
       border: none;
       border-top: 0.5px solid gray;
 
       @include mobile {
         width: 300px;
+        margin-right: 0;
       }
     }
   }
@@ -48,7 +53,8 @@
 
     @include mobile {
       width: 100%;
-      margin-top: 0;
+      margin-top: 2rem;
+      flex: 1;
     }
 
     // Ensure base container lays out children as a row by default,
@@ -65,11 +71,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 10px;
-        > * {
-          width: 100%;
-          text-align: center;
-        }
       }
     }
 
@@ -77,22 +78,25 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 50px;
-      margin-bottom: 2rem;
+      gap: 20px;
+      margin-bottom: 1rem;
 
       @include mobile {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        margin-bottom: 0;
       }
     }
     h2 {
-      font-size: 76px;
+      font-size: 68px;
       font-weight: lighter;
       text-align: center;
+      line-height: 90px;
 
       @include mobile {
         font-size: 36px;
+        line-height: 40px;
+        margin-top: 0;
       }
 
       b {
@@ -103,7 +107,6 @@
     .left_cont {
       display: flex;
       max-width: 1366px;
-
       margin: auto;
       // space between columns
 
@@ -130,13 +133,25 @@
         text-align: center;
         max-width: 750px;
 
+        @include mobile {
+          order: 1;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          right: 10px;
+        }
+
         .ab_text {
           line-height: 1.6;
           margin-bottom: 1.5rem;
           font-size: 18px;
 
           @include mobile {
-            display: none; // hide all about text on mobile
+            display: none;
+            order: 2;
+            width: 100%;
+            margin-top: 12px;
+            gap: 12px; // hide all about text on mobile
           }
         }
 
@@ -144,18 +159,17 @@
           display: flex;
           flex-direction: row;
           gap: 2rem;
-          margin-top: 1rem;
           justify-content: center;
           align-items: center;
 
           @include mobile {
             font-size: 16px;
-            width: auto;
-            height: auto;
-            margin: 0 auto;
+
             justify-content: center;
             align-items: center;
-            gap: 12px;
+            position: relative;
+            bottom: 1px;
+            gap: 10px;
           }
 
           .sparkle-button {
@@ -176,12 +190,13 @@
             background: var(--bg);
             font-size: 1.2rem;
             font-weight: 500;
-            width: 10.2rem;
+            width: 11rem;
             border: 0;
             cursor: pointer;
-            padding: 1em 1em;
+            padding: 1rem 1rem;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 0.25em;
             white-space: nowrap;
             border-radius: 100px;
@@ -413,38 +428,15 @@
         display: flex;
         flex-direction: column;
         grid-column: 2;
-        gap: 3rem;
+        gap: 2rem;
         justify-content: center;
         align-items: center;
 
         // On mobile, keep some side gap so cards don't touch screen edges
         @include mobile {
-          gap: 8px;
-          .card_cont {
-            width: 92%;
-            margin: 0 auto;
-            height: 88px;
-            .card_info {
-              height: 88px;
-              padding: 12px;
-              .content_row {
-                gap: 8px;
-                .card_icon {
-                  width: 28px;
-                  height: 28px;
-                }
-                .divider {
-                  height: 56%;
-                }
-                .text {
-                  h4 {
-                    font-size: 15px;
-                    margin-bottom: 2px;
-                  }
-                }
-              }
-            }
-          }
+          top: 2rem;
+          gap: 98px;
+          position: relative;
         }
 
         .card_cont {
@@ -458,6 +450,12 @@
           align-items: center;
           justify-content: center;
 
+          @include mobile {
+            width: 92%;
+            margin: 0 auto;
+            height: 58px;
+          }
+
           .card_info {
             width: 100%;
             height: 120px;
@@ -467,6 +465,11 @@
             padding: 25px;
             cursor: pointer;
 
+            @include mobile {
+              height: 150px;
+              padding: 9px;
+            }
+
             .content_row {
               display: grid;
               grid-template-columns: 48px 1px auto;
@@ -474,6 +477,9 @@
               align-items: center;
               gap: 14px;
               height: 100%;
+              @include mobile {
+                gap: 7px;
+              }
 
               .card_icon {
                 color: white;
@@ -485,6 +491,11 @@
                 border-radius: 999px;
                 background: rgba(102, 51, 153, 0.12);
                 border: 1px solid rgba(102, 51, 153, 0.4);
+
+                @include mobile {
+                  width: 28px;
+                  height: 28px;
+                }
               }
 
               .divider {
@@ -494,6 +505,10 @@
                 position: relative;
                 background: rgba(255, 255, 255, 0.1);
                 overflow: hidden;
+
+                @include mobile {
+                  height: 56%;
+                }
 
                 &::after {
                   content: "";
@@ -533,6 +548,11 @@
                 text-align: left;
                 h4 {
                   margin-bottom: 6px;
+
+                  @include mobile {
+                    font-size: 20px;
+                    margin-bottom: 2px;
+                  }
                 }
                 p {
                   line-height: 1.5rem;
@@ -542,7 +562,7 @@
                 // Hide card description on small screens
                 @include mobile {
                   p {
-                    display: none;
+                    font-size: 15px;
                   }
                 }
               }

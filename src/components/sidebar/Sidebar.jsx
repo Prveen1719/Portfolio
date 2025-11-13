@@ -26,13 +26,31 @@ const variants = {
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
 
+  const handleClose = () => setOpen(false);
+
   return (
-    <motion.div className='sidebar' animate={open ? "open" : "closed"}>
-      <motion.div className='bg' variants={variants}>
-        <Links />
+    <>
+      {open && (
+        <motion.div
+          className='sidebarBackdrop'
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={handleClose}
+        />
+      )}
+
+      <motion.div className='sidebar' animate={open ? "open" : "closed"}>
+        <motion.div
+          className='bg'
+          variants={variants}
+          onClick={(event) => event.stopPropagation()}
+        >
+          <Links setOpen={setOpen} />
+        </motion.div>
+        <ToggleButton setOpen={setOpen} />
       </motion.div>
-      <ToggleButton setOpen={setOpen} />
-    </motion.div>
+    </>
   );
 };
 
