@@ -22,17 +22,11 @@ const NavBar = () => {
           transition={{ duration: 0.5 }}
           className='socials'
         >
-          <a href='#'>
-            <img src='/facebook.png' alt='' />
+          <a href='https://github.com/Prveen1719'>
+            <img src='/github.png' alt='' />
           </a>
-          <a href='#'>
-            <img src='/instagram.png' alt='' />
-          </a>
-          <a href='#'>
-            <img src='/youtube.png' alt='' />
-          </a>
-          <a href='#'>
-            <img src='/dribbble.png' alt='' />
+          <a href='https://linkedin.com/in/praveen-peiris-65826a354'>
+            <img src='/linkedin.png' alt='' />
           </a>
         </motion.div>
       </div>
