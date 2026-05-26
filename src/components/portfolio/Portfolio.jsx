@@ -83,7 +83,9 @@ const Single = ({ item }) => {
               ))}
             </div>
             <p>{item.desc}</p>
-            <button>See Code</button>
+            <a href='https://github.com/sevindunimrod/Alina-project'>
+              <button>See Code</button>
+            </a>
           </motion.div>
         </div>
       </div>

@@ -5,11 +5,11 @@ import "./skills.scss";
 const skills = [
   //web
   { name: "HTML5 / CSS3", level: 100, category: "Web Tools" },
-  { name: "JavaScript", level: 90, category: "Web Tools" },
-  { name: "React.js", level: 80, category: "Web Tools" },
+  { name: "JavaScript", level: 100, category: "Web Tools" },
+  { name: "React.js", level: 100, category: "Web Tools" },
   { name: "Vue.js", level: 50, category: "Web Tools" },
   { name: "TailwindCSS", level: 80, category: "Web Tools" },
-  { name: "Node.js", level: 90, category: "Web Tools" },
+  { name: "Node.js", level: 100, category: "Web Tools" },
   { name: "JQuery", level: 40, category: "Web Tools" },
   { name: "TypeScript", level: 90, category: "Web Tools" },
 
@@ -18,41 +18,45 @@ const skills = [
   { name: "MS SQL Server", level: 90, category: "Databases" },
   { name: "PostgreSQL", level: 90, category: "Databases" },
   { name: "MongoDB", level: 100, category: "Databases" },
-  { name: "SnowFlake", level: 70, category: "Databases" },
+  { name: "SnowFlake", level: 95, category: "Databases" },
 
   //data
   { name: "POwerBI", level: 100, category: "Data Analytics" },
   { name: "Python", level: 100, category: "Data Analytics" },
   { name: "R Language", level: 70, category: "Data Analytics" },
-  { name: "SSRS", level: 80, category: "Data Analytics" },
-  { name: "SSIS", level: 80, category: "Data Analytics" },
-  { name: "DBT", level: 80, category: "Data Analytics" },
-  { name: "Matillion", level: 80, category: "Data Analytics" },
+  { name: "SSRS", level: 50, category: "Data Analytics" },
+  { name: "SSIS", level: 50, category: "Data Analytics" },
+  { name: "DBT", level: 100, category: "Data Analytics" },
+  { name: "Matillion", level: 90, category: "Data Analytics" },
 
   //AI Tools and ML
   { name: "Tensorflow", level: 80, category: "AI and Machine Learning" },
   { name: "PyTorch", level: 80, category: "AI and Machine Learning" },
-  { name: "Stable Diffusion", level: 80, category: "AI and Machine Learning" },
-  { name: "Deep Learning", level: 80, category: "AI and Machine Learning" },
-  { name: "Random Forest", level: 80, category: "AI and Machine Learning" },
-  { name: "Ensamble Learning", level: 80, category: "AI and Machine Learning" },
-  { name: "Image Processing", level: 80, category: "AI and Machine Learning" },
-  { name: "Computer Vision", level: 80, category: "AI and Machine Learning" },
+  { name: "Stable Diffusion", level: 50, category: "AI and Machine Learning" },
+  { name: "Deep Learning", level: 50, category: "AI and Machine Learning" },
+  { name: "Random Forest", level: 90, category: "AI and Machine Learning" },
+  {
+    name: "Ensamble Learning",
+    level: 100,
+    category: "AI and Machine Learning",
+  },
+  { name: "Image Processing", level: 90, category: "AI and Machine Learning" },
+  { name: "Computer Vision", level: 90, category: "AI and Machine Learning" },
 
   //DevOps
-  { name: "SSRS", level: 80, category: "DevOps" },
-  { name: "SSRS", level: 80, category: "DevOps" },
-  { name: "SSRS", level: 80, category: "DevOps" },
-  { name: "SSRS", level: 80, category: "DevOps" },
+  { name: "Azure DevOps", level: 60, category: "DevOps" },
+  { name: "GitHub CI/CD", level: 90, category: "DevOps" },
+  { name: "Docker", level: 60, category: "DevOps" },
+  { name: "Kubernetts", level: 50, category: "DevOps" },
 
   //Programming Languages
-  { name: "Python", level: 80, category: "Languages" },
-  { name: "TypeScript", level: 80, category: "Languages" },
-  { name: "JavaScript", level: 80, category: "Languages" },
-  { name: "Java", level: 80, category: "Languages" },
+  { name: "Python", level: 100, category: "Languages" },
+  { name: "TypeScript", level: 90, category: "Languages" },
+  { name: "JavaScript", level: 100, category: "Languages" },
+  { name: "Java", level: 90, category: "Languages" },
   { name: "C++", level: 80, category: "Languages" },
   { name: "C#", level: 80, category: "Languages" },
-  { name: "PHP", level: 80, category: "Languages" },
+  { name: "PHP", level: 90, category: "Languages" },
 ];
 
 const Skills = () => {

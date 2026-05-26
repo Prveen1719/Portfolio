@@ -74,7 +74,7 @@ const About = () => {
               </p>
 
               <div className='buttons'>
-                <a href='contact' className='button'>
+                <a href='Contact' className='button'>
                   <button class='sparkle-button'>
                     <span class='spark'></span>
 
@@ -84,12 +84,14 @@ const About = () => {
                   </button>
                 </a>
 
-                <a href='contact' className='button'>
+                <a
+                  href='/cv.pdf'
+                  download='Praveen_Peiris_CV.pdf'
+                  className='button'
+                >
                   <button class='sparkle-button'>
                     <span class='spark'></span>
-
                     <span class='backdrop'></span>
-
                     <span class='text'>Download CV</span>
                   </button>
                 </a>
